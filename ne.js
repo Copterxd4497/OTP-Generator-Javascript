@@ -7,6 +7,7 @@ function random() {
         let number = create_randomnumber();
         numbers.push(number);
     }
+    console.log(numbers);
     return numbers.join('');
 }
 
@@ -14,8 +15,9 @@ function create_randomnumber() {
     return Math.floor(Math.random() * 10);
 }
 
-let super_result = random(); 
-
-btn.addEventListener('click', () => {
+function display(){
+    let super_result = random(); 
     insult.textContent = super_result;
-});
+}
+
+btn.onclick = display;
